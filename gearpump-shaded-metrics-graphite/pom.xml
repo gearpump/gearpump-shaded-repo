@@ -51,7 +51,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>com.codahale.metrics</pattern>
-                                    <shadedPattern>com.shaded.codahale.metrics</shadedPattern>
+                                    <shadedPattern>io.gearpump.codahale.metrics</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>

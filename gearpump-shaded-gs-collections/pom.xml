@@ -46,7 +46,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>com.gs.collections</pattern>
-                                    <shadedPattern>com.shaded.gs.collections</shadedPattern>
+                                    <shadedPattern>io.gearpump.gs.collections</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>

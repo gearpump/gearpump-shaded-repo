@@ -45,8 +45,8 @@
                             </transformers>
                             <relocations>
                                 <relocation>
-                                    <pattern>com.google.common</pattern>
-                                    <shadedPattern>com.shaded.google.common</shadedPattern>
+                                    <pattern>com.google</pattern>
+                                    <shadedPattern>io.gearpump.google</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
