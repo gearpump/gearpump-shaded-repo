@@ -23,6 +23,7 @@
         <module>gearpump-shaded-metrics-graphite</module>
         <module>gearpump-shaded-gs-collections</module>
         <module>gearpump-shaded-guava</module>
+        <module>gearpump-shaded-akka-kryo</module>
     </modules>
     <parent>
         <groupId>org.apache</groupId>
@@ -42,6 +43,9 @@
     </licenses>
 
     <properties>
+        <akka.version>2.3.6</akka.version>
+        <scala.version>2.11</scala.version>
+        <akka.kryo.version>0.3.2</akka.kryo.version>
         <codahale.metrics.version>3.0.2</codahale.metrics.version>
         <guava.version>16.0.1</guava.version>
         <gs-collections.version>6.2.0</gs-collections.version>
@@ -65,6 +69,17 @@
             <id>apache-repo</id>
             <name>Apache Repository</name>
             <url>https://repository.apache.org/content/repositories/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <name>Sonatype Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/releases</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -98,6 +113,11 @@
     </pluginRepositories>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.github.romix.akka</groupId>
+                <artifactId>akka-kryo-serialization_${scala.version}</artifactId>
+                <version>${akka.kryo.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.codahale.metrics</groupId>
                 <artifactId>metrics-graphite</artifactId>
