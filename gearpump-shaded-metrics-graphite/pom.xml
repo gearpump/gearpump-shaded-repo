@@ -16,6 +16,10 @@
             <groupId>com.codahale.metrics</groupId>
             <artifactId>metrics-graphite</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.codahale.metrics</groupId>
+            <artifactId>metrics-jvm</artifactId>
+        </dependency>        
     </dependencies>
     <build>
         <plugins>
